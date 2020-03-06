@@ -1,0 +1,26 @@
+<!-- <p>vendor-pending-history works!</p>
+<p>vendor-order-history works!</p> -->
+<table border="3">
+        <tr>
+            <th>CUSTOMER ID</th>
+            <th>TOKEN NUMBER</th>
+            <th>ORDER DATE</th>
+            <th>ORDER ITEM</th>
+            <th>ORDER QUANTITY</th>
+            <th>ORDER STATUS</th>
+            <th>ORDER COST</th>
+            <th>VENDOR ID</th>
+            
+
+        </tr>
+        <tr *ngFor="let y of orders | async">
+            <td>{{y.cusId}}</td>
+            <td>{{y.tokenId}}</td>
+            <td>{{y.ordDate}}</td>
+            <td>{{y.ordItemSel}}</td>
+            <td>{{y.ordQty}}</td> 
+            <td>{{y.ordStatus}}</td>
+            <td>{{y.ordCost}}</td>
+            <td>{{y.venId}}</td>
+        </tr>
+    </table>

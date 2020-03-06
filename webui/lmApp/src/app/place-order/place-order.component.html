@@ -1,0 +1,55 @@
+
+<p>place-order works!</p>
+
+<form name="placeOrder">
+    Customer Id : 
+    <input type="number" name="model.cusId" [(ngModel)]="model.cusId" />  <br/> <br/> <br/> 
+    Token Id : 
+    <input type="number" [(ngModel)]="model.tokenId" name="tokenId" /> <br/><br/> 
+    Order Date  :
+    <input type="date" [(ngModel)]="model.ordDate" name="ordDate" /> <br/><br/>
+    Select Menu Item :
+    <select [(ngModel)]="menu.foodItemName" name="foodItemName" (change)="showAmount()">
+        <option *ngFor="let e of menuList | async" value={{e.foodItemName}}>
+            {{e.foodItemName}}
+        </option>
+    </select> <br/><br/> 
+    Quantity of Order : 
+    <input type="number" [(ngModel)]="model.ordQty" name="ordQty" /> <br/><br/> 
+     <!--order status :
+    <input type="text"  [(ngModel)]="model.status" name="status" /> <br/><br/>
+    order cost :
+    <input type="number"  [(ngModel)]="model.ordCost" name="ordCost" /> <br/><br/>-->
+    
+  Price : 
+    <input type="number" name="price" [(ngModel)]="price" readonly /> <br/><br/> 
+  <!--  Order total cost : 
+    <input type="number" [(ngModel)]="model.ordCost" name="ordCost" /> <br/><br/>  -->
+    Vendor Id :
+    <input type="number"  [(ngModel)]="model.venId" name="venId" /> <br/><br/>
+   
+     <!-- Select Wallet Type :   
+    <select [(ngModel)]="wallet.walType" name="walType">
+        <option *ngFor="let f of walletList | async" value={{f.walType}}>
+            {{f.walType}}
+        </option>
+    </select> <br/><br/> 
+    Order Token 
+    <input type ="number" [(ngModel)]="model.ordToken" name ="ordToken" /> <br><br/>
+    
+    Order Comments  :
+    <input type="text" [(ngModel)]="model.ordComments" name="ordComments" /> <br/><br/> 
+    Select Vendor  
+    <select [(ngModel)]="vendor.venId" name="venId">
+        <option *ngFor="let f of vendorList | async" value={{f.venId}}>
+            {{f.venId}}
+        </option>
+    </select> <br/><br/> -->
+    <input type="button" value="Place Order" (click)=placeOrder() />   <br/><br/> 
+    {{result}}
+</form>
+
+
+
+
+

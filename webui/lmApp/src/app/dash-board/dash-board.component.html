@@ -1,0 +1,89 @@
+<label style="color:blue;"><marquee width = "50%"><h3>Welcome {{userName}}</h3></marquee></label>
+<!-- <app-customer-info></app-customer-info> 
+<hr/>
+<br/> 
+<app-customer-order-history></app-customer-order-history>
+<hr/>
+<br/>
+<app-customer-pending-history></app-customer-pending-history>
+<hr/>
+<br/>
+<app-place-order></app-place-order>
+<hr/>
+<br/>
+<app-customer-cancel-order></app-customer-cancel-order> -->
+
+<app-customer-info></app-customer-info>
+<style>
+
+
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .placeorder {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(224, 106, 77);
+  }
+  
+  .placeorder:hover {
+    background-color: #4CAF50;
+    color: white;}
+
+    .customer1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(122, 76, 175);
+  }
+  
+  .customer1:hover {
+    background-color: rgb(94, 76, 175);
+    color: white;}
+
+    .cancel {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+  .cancel:hover {
+    background-color: rgb(235, 64, 42);
+    color: white;}
+
+    .logout {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(223, 247, 7);
+  }
+  
+  .logout:hover {
+    background-color: rgb(42, 235, 145);
+    color: white;}
+    </style>
+<body>
+<a style="font-family: cursive" class="placeorder button"[routerLink]="['/dashBoard',
+{outlets: {'data':['placeOrder']}}]">Place Order</a> &nbsp;&nbsp;&nbsp;&nbsp;
+
+<!-- <a [routerLink]="['/dashBoard',{outlets: {'data':['customerPendingHistory']}}]">Customer Pending History</a> &nbsp;&nbsp;&nbsp;&nbsp; -->
+<a style="font-family: cursive" class="customer1 button"[routerLink]="['/dashBoard',
+{outlets: {'data':['customerOrderHistory']}}]">Customer Order History </a> &nbsp;&nbsp;&nbsp;&nbsp;
+
+<!-- <a [routerLink]="['/dashBoard',{outlets: {'data':['wallet']}}]">wallet Order</a> &nbsp;&nbsp;&nbsp;&nbsp; -->
+<a style="font-family: cursive" class="cancel button" [routerLink]="['/dashBoard',
+{outlets: {'data':['customerCancelOrder']}}]">Customer Cancel Order</a> &nbsp;&nbsp;&nbsp;&nbsp;
+<a style="font-family: cursive" class="logout button" [routerLink]="['/cms-main']">LogOut</a> &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<router-outlet name='data'></router-outlet>
+  </body>

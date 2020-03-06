@@ -1,0 +1,83 @@
+<style>
+ body{
+background-image:url("https://www.photobox.co.uk/my/photo/full?photo_id=502748652488");
+background-size: cover;
+text-align:center;
+}
+
+.btn {
+ 
+ float: left;
+ float: left;
+  width: 3%;
+  height: 200px;
+  padding: 2%;
+  border: none;
+  border-radius: 10%;
+  margin: 5%;
+  opacity: 0.85;
+ 
+  
+  font-size: 15px;
+  text-align:left;
+  line-height: 2px;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  margin-top:5%;
+  margin-bottom:5%;
+  text-decoration: none;
+}
+ .btn:hover {
+   color: rgb(240, 240, 243);
+   background:rgb(3, 153, 3);
+}
+.customer {
+  background-color: rgb(5, 203, 253);
+  color: white;
+  border-radius: 24px;
+  height: 10%;
+  width: 15%;
+ 
+}
+.vendor {
+  background-color: rgb(223, 115, 96);
+  color: white;
+  border-radius: 24px;
+  height: 10%;
+  width: 15%;
+ }
+.center {
+  float: left;
+top:50%;
+  background-position:50% 70%;
+  margin-left: auto;
+
+  width: 45%;
+  height: 50%;
+}
+
+</style>
+
+
+
+<body>
+  <h1 style="font-family: 'Lucida Sans';color:rgb(128, 14, 14);font-style: bold;position:center">GOOD FOOD  </h1>
+
+<img class="center" size = "50px" 
+src="https://serving.photos.photobox.com/40810058bc47aaa5e0cc6c7d7067d692834ee51e10a17ab1348a04f9fba6b5be39ebbc7b.jpg"
+ alt="Food Image Error!">
+
+ 
+ <a style="font-family: cursive"  class = "vendor btn" [routerLink]="['/cms-main',
+ {outlets: {'data': ['vendor-login']}}]">VENDOR LOGIN</a>&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+<a style="font-family: cursive" class = "customer btn" [routerLink]="['/cms-main',
+ {outlets: {'data': ['customer-login']}}]">CUSTOMER LOGIN</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<router-outlet name='data'></router-outlet>
+
+</body>
+ 
+   

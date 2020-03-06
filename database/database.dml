@@ -1,0 +1,8 @@
+-- change the database to your team id
+use MLP192;
+
+
+
+insert into CUSTOMER values(100,'Dfhg','arun','1990-07-10','794896048','arun@gmail.com',1000.0);
+insert into MENU values(101,'dosa',40.00,100),(102,'idly',20.00,100),(103,'biriyani',120.00,100),(104,'chapathi',40.00,100);
+insert into VENDOR values(101,100,'raja','available','894329049',1000.0),(100,100,'bala','not available','783495939',1500.0);

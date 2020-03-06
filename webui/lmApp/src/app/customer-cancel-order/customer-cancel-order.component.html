@@ -1,0 +1,12 @@
+<p>customer-cancel-order works!</p>
+<form>
+    Token Id : 
+    <input type="number" name="tokenId" [(ngModel)]="tokenId" /> <br/><br/> 
+ <!--    Order Id : 
+    <input type="number" name="orderId" [(ngModel)]="orderId" /> <br/><br/>  -->
+    Status : 
+    <input type="text" name="ordStatus" [(ngModel)]="ordStatus" /> <br/><br/> 
+    <input type="button" value="cancel" (click)="cancel()" /> <br/><br/>
+    {{result}}
+
+</form>
